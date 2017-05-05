@@ -1,0 +1,54 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.contenedor{
+    min-width: 512px;
+    width: 100%;
+    height: auto;
+}
+
+.encabezado {
+    width: 100%;
+    height: 256px;
+    /*background-color: green;*/
+    background: url("../imagenes/montaje messi.jpg") 100% 100%;
+
+}
+
+.menu {
+    margin: auto;
+    max-width: 1024px;
+    width: 100%;
+    height: 40px;
+    background-color: red;
+}
+
+.cuerpo {
+    margin: auto;
+    max-width: 1024px;
+    width: 100%;
+    height: 256px;
+    background-color transparent;
+}
+
+.lateral {
+    float: left;
+    width: 25%;
+    height: 256px;
+    background-color: blue;
+}
+
+.contenido{
+    float:left;
+    width:75%;
+    height: 256px;
+    background-color: aqua;
+}
+
+.pie {
+    width: 100%;
+    height: 128px;
+    background-color: darkslategray;
+}

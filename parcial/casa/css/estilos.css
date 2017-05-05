@@ -1,0 +1,92 @@
+@font-face
+{
+    font-family: Cantarell;
+    src: url("../fonts/Cantarell-Regular.ttf");  
+}
+
+body{
+    font-family: Cantarell;
+    padding: 0px;
+    margin: 0px;
+    background: rgb(230, 230, 255);
+}
+
+.contenedor{
+    margin: auto;
+    min-width: 512px;
+    width: 1024px;
+    height: auto;
+}
+
+.encabezado {
+    width: 100%;
+    height: 180px;
+    background-color: green;
+    background-image: url("../imagenes/baner.png");
+    background-size: cover;
+}
+
+.cuerpo {
+    margin: auto;
+    max-width: 1024px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.lateral {
+    float: left;
+    width: 25%;
+    
+    background-color: transparent;
+}
+
+.contenido{
+    float:left;
+    width:75%;
+    height: auto;
+    background-color: transparent;
+}
+
+.limpiador{
+    clear: both;
+}
+
+.boton {
+    background: rgb(51, 153, 255);
+    width: 156px;
+    height: 24px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px auto;
+    /*box-shadow: 5px 5px 5px rgb(51, 102, 153);*/
+    border: rgb(0, 136, 204) 1px solid;
+    border-radius: 3px;
+    color: rgb(240, 240, 255);
+    text-shadow: 1px 1px rgb(96, 96, 96);
+    cursor: default;
+}
+
+.boton:hover {
+    background: rgb(255, 102, 102);
+    border: rgb(255, 77, 77) 1px solid;
+}
+
+.montaje {
+    width: 100%;
+    height: 300px;
+    background-image: url("../imagenes/montaje messi.jpg");
+    background-position: 0px -220px;
+    background-repeat: no-repeat;
+}
+
+.noticias, .eventos, .enlaces {
+    width: 32.5%;
+    /*background: blue;
+    border: 1px solid black;*/
+    display: inline-block;
+    margin: 0px;
+}
+
+a {
+    color: black;
+}
