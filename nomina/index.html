@@ -5,48 +5,174 @@
     <meta name="keywords" content="HTML, CSS, XML, JAVASCRIPT" >
     <link rel="stylesheet" type="text/css" href="./css/reset.css"></link>
     <link rel="stylesheet" type="text/css" href="./css/estilos.css"></link>
+    <script type="text/javascript" src="./js/contrib.js?0.9.1"></script>
     <script type="text/javascript" src="./js/funciones.js?0.9.1"></script>
   </head>
-  
+
   <body>
     <div class="contenedor">
-      
+
       <div class="encabezado">
-          Encabezado
+          <div class="contenedor-encabezado">
+              <img id="logo" src="./imagenes/appbar.folder.people.svg"/><span>Nomina</span>
+          </div>
       </div>
 
       <div class="cuerpo">
 
         <div class="lateral"></div>
-        
-        <div class="contenido">
-            
-            <div class="row">
-                
+
+        <div id="contenido" class="contenido">
+
+            <div class="row fila">
                 <div class="cell md-6">
                     <label>Trabajador</label>
                 </div>
 
                 <div class="cell md-6">
-                    <select>
-                        <option value""></option>
-                        <option value"Juan">Juan</option>
-                        <option value"Pedro">Pedro</option>
-                        <option value"Lolo">Lolo</option>
+                    <select id="Trabajador">
+                        <option value=""></option>
+                        <option value="01">Juan</option>
+                        <option value="02">Pedro</option>
+                        <option value="03">Lolo</option>
                     </select>
                 </div>
 
             </div>
 
-            <div class="row">
-              
-              <div class="cell md-1">
-                  <label>Sueldo</label>
-              </div>
+            <div class="row fila">
+                <div class="cell md-6">
+                    <label>Sueldo</label>
+                  </div>
 
-              <div class="cell md-11">
-                  <input type="text" readonly="readonly"/>
-              </div>
+                  <div class="cell md-6">
+                      <input id="Sueldo" type="text" readonly="readonly" style="text-align: right;"/>
+                  </div>
+            </div>
+
+            <div class="row fila">
+                <div class="cell md-12" style="text-align: center;">
+                    <span style="font-weight: bold;">Horas Extras</span>
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <span>Diurnas</span>
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <span>Nocturnas</span>
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <span>Dominicales</span>
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <span>Festivos</span>
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <input id="DiurnasSi" type="radio" name="Diurnas" value="si" /><span>Si</span>&nbsp;
+                    <input id="DiurnasNo" type="radio" name="Diurnas" value="no" /><span>No</span>
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <input id="NocturnasSi" type="radio" name="Nocturnas" value="si" /><span>Si</span>&nbsp;
+                    <input id="NocturnasNo" type="radio" name="Nocturnas" value="no" /><span>No</span>
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <input id="DominicalesSi" type="radio" name="Dominicales" value="si" /><span>Si</span>&nbsp;
+                    <input id="DominicalesNo" type="radio" name="Dominicales" value="no" /><span>No</span>
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <input id="FestivosSi" type="radio" name="Festivos" value="si" /><span>Si</span>&nbsp;
+                    <input id="FestivosNo" type="radio" name="Festivos" value="no"/><span>No</span>
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <input id="NumDiurnas" type="text" style="display: none; text-align: right;"/>&nbsp;
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <input id="NumNocturnas" type="text" style="display: none; text-align: right;"/>&nbsp;
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <input id="NumDominicales" type="text" style="display: none; text-align: right;"/>&nbsp;
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <input id="NumFestivos" type="text" style="display: none; text-align: right;"/>&nbsp;
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <span id="ValorDiurnas" style="display: none; text-align: right;">$</span>&nbsp;
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <span id="ValorNocturnas" style="display: none; text-align: right;">$</span>&nbsp;
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <span id="ValorDominicales" style="display: none; text-align: right;">$</span>&nbsp;
+                </div>
+
+                <div class="cell md-3" style="text-align: center;">
+                    <span id="ValorFestivos" style="display: none; text-align: right;">$</span>&nbsp;
+                </div>
+
+                <div class="cell md-12" style="text-align: center;">
+                    <div id="Agregar" class="button-flat" style="display: none;">
+                        <img src="./imagenes/appbar.arrow.down.special.svg"/><span>Agregar</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row fila">
+                <div class="cell md-12" style="text-align: center;">
+                    <span style="font-weight: bold;">Detalles</span>
+                </div>
+
+                <div class="cell md-2 coll" style="text-align: center;">
+                    <span>Trabajador</span>
+                </div>
+
+                <div class="cell md-2 coll" style="text-align: center;">
+                    <span>Sueldo Básico</span>
+                </div>
+
+                <div class="cell md-3 coll" style="text-align: center;">
+                    <span>Recargo</span>
+                </div>
+
+                <div class="cell md-2 coll" style="text-align: center;">
+                    <span>Total Recargo</span>
+                </div>
+
+                <div class="cell md-2 coll" style="text-align: center;">
+                    <span>Totales</span>
+                </div>
+
+                <div class="cell md-1 coll" style="text-align: center;">
+                    <span>Eliminar</span>
+                </div>
+            </div>
+
+            <div id="detalles" style="width: 100%;">
+
+            </div>
+
+            <div class="row fila">
+
+                <div class="cell md-9 coll" style="text-align: right;">
+                    <span style="font-weight: bold;">Total</span>
+                </div>
+
+                <div class="cell md-2" style="text-align: right;">
+                    <span id="grantotal">$</span>
+                </div>
 
             </div>
 

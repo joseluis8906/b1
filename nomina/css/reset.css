@@ -1,7 +1,7 @@
 @font-face
 {
     font-family: Cantarell;
-    src: url("../fonts/Cantarell-Regular.ttf");  
+    src: url("../fonts/Cantarell-Regular.ttf");
 }
 @font-face
 {
@@ -23,14 +23,15 @@
     font-family: TimesNewRomanBold;
     src: url("../fonts/timesbd.ttf");
 }
-html, body, div, span, applet, object, iframe, h1, 
-h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, 
-address, big, cite, code, del, dfn, em, font, img, ins, kbd, 
-q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, 
-center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+html, body, div, span, applet, object, iframe, h1,
+h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, font, img, ins, kbd,
+q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, input, option, select, textarea
 {
     border:  none;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     /*background: transparent no-repeat scroll;*/
@@ -167,16 +168,70 @@ input[type=range], input[type=range]:focus, input[type=range]:active, input[type
     /*border-width: 0;*/
     /*border-color: transparent;*/
 }
-/*
-::-webkit-input-placeholder{
-    color: rgba(240,255,255,1);
-    opacity: 1;
+
+.row
+{
+    width: 100%;
+    height: auto;
+    background: red;
+    overflow: hidden;
 }
-::-moz-placeholder {
-    color: rgba(240,255,255,1);
-    opacity: 1;
+
+.cell
+{
+    float: left;
+    display: inline-block;
+    margin: none;
+    padding: none;
+    height: auto;
+    overflow: hidden;
 }
-select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}*/
+
+.md-12
+{
+    width: 100%;
+}
+.md-11
+{
+    width: 91.666%;
+}
+.md-10
+{
+    width: 83.333%;
+}
+.md-9
+{
+    width: 75%;
+}
+.md-8
+{
+    width: 66.666%;
+}
+.md-7
+{
+    width: 58.333%;
+}
+.md-6
+{
+    width: 50%;
+}
+.md-5
+{
+    width: 41.666%;
+}
+.md-4
+{
+    width: 33.333%;
+}
+.md-3
+{
+    width: 25%;
+}
+.md-2
+{
+    width: 16.666%;
+}
+.md-1
+{
+    width: 8.333%;
+}
