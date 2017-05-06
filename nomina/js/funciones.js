@@ -205,6 +205,12 @@ function calcular_extras ()
 function agregar ()
 {
     var Trabajador = document.getElementById("Trabajador").value;
+
+    if (Trabajador==="")
+    {
+        return;
+    }
+
     var trabajadores = [
         {id:"01", nombre: "Juan", sueldo: 1000000},
         {id:"02", nombre: "Pedro", sueldo: 1500000},
