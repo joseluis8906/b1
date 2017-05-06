@@ -297,6 +297,8 @@ function agregar ()
     document.getElementById("detalles").appendChild (fila);
 
     calcular_total ();
+
+    reset ();
 }
 
 function eliminar_fila ()
@@ -316,4 +318,50 @@ function calcular_total ()
     }
 
     document.getElementById("grantotal").textContent = TextToMonetary(total);
+}
+
+function reset ()
+{
+    document.getElementById("Trabajador").selectedIndex=0;
+    document.getElementById("Sueldo").setAttribute ("value", "");
+
+    var radios = [
+        document.getElementById("DiurnasSi"),
+        document.getElementById("NocturnasSi"),
+        document.getElementById("DominicalesSi"),
+        document.getElementById("FestivosSi")
+    ];
+
+    for (var i=0; i<radios.length; i++)
+    {
+        radios[i].checked = false;
+    }
+
+    var inputs = [
+        document.getElementById("NumDiurnas"),
+        document.getElementById("NumNocturnas"),
+        document.getElementById("NumDominicales"),
+        document.getElementById("NumFestivos")
+    ];
+
+    for (var i=0; i<inputs.length; i++)
+    {
+        inputs[i].style.display = "none";
+        inputs[i].value = "";
+    }
+
+    var spans = [
+        document.getElementById("ValorDiurnas"),
+        document.getElementById("ValorNocturnas"),
+        document.getElementById("ValorDominicales"),
+        document.getElementById("ValorFestivos")
+    ];
+
+    for (var i=0; i<spans.length; i++)
+    {
+        spans[i].style.display = "none";
+        spans[i].textContent = "$";
+    }
+
+    document.getElementById("Agregar").style.display = "none";
 }
